@@ -1,6 +1,6 @@
 <script>
   import Note from "./Note.svelte";
-  let serverUrl = "https://remembr-api.herokuapp.com/notes";
+  let serverUrl = "API_URL";
   let notesPromise = getNotes();
 
   async function getNotes() {
