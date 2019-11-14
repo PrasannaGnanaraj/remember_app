@@ -18,7 +18,7 @@ export default {
 		file: 'public/bundle.js'
 	},
 	plugins: [
-		replace({ API_URL: process.env.API_RUL }),
+		replace({ API_URL: process.env.API_URL }),
 		postcss({ extract: true }),
 		svelte({
 			// enable run-time checks when not in production
