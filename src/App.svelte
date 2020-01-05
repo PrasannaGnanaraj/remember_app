@@ -5,7 +5,7 @@
 
   const GOOGLE_BUTTON_ID = "google-sign-in-button";
 
-  const onSignIn = googleUser => {
+  window.onSignIn = googleUser => {
     const profile = googleUser.getBasicProfile();
     console.log("Name: " + profile.getName());
   };
