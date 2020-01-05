@@ -4,14 +4,17 @@
   import { onMount } from "svelte";
 
   const GOOGLE_BUTTON_ID = "google-sign-in-button";
-
+  let Userimage, UserId;
   window.onSignIn = googleUser => {
     const profile = googleUser.getBasicProfile();
-    console.log("Name: " + profile.getName());
+    Userimage = profile.getImageUrl();
+    UserId = profile.getId();
   };
 </script>
 
 <Header>
   <div class="g-signin2" data-onsuccess="onSignIn" />
 </Header>
-<Notes />
+{#if UserId}
+  <Notes />
+{/if}
