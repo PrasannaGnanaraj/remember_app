@@ -12,7 +12,7 @@
   };
 </script>
 
-<Header>
+<Header {Userimage}>
   <div class="g-signin2" data-onsuccess="onSignIn" />
 </Header>
 {#if UserId}
